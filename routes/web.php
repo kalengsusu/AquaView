@@ -34,3 +34,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/calculate', 'OrderController@calculateTotalAndLocation');
+
+Route::get('/checkout', [OrderController::class, 'showCheckoutForm'])->name('checkout.form');
+
+Route::post('/checkout', [OrderController::class, 'checkout'])->name('checkout.process');
+
+Route::get('/checkout/confirmation/{totalPrice}', [OrderController::class, 'showConfirmation'])->name('checkout.confirmation');
+
+Route::post('/checkout/confirm', [OrderController::class, 'confirmPayment'])->name('checkout.confirm');
