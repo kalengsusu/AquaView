@@ -1,14 +1,14 @@
-{{-- @extends('layouts.app') --}}
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="ico" href="{{ Vite::asset('resources/images/Logo-.ico') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('', 'AquaView') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -17,9 +17,9 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
+
 <body class="bg-primary">
-    {{-- @section('content') --}}
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-md navbar-dark-color shadow-lg p-3" style="background-color: #32BBE0;">
         <div class="container">
             <ul class="navbar-nav ms-auto">
                 @if (Route::has('register'))
@@ -36,7 +36,7 @@
                 <div class="card">
                     {{-- <div class="card-header d-flex justify-content-center">{{ __('Employee Data Master') }}</div> --}}
                     <img class="w-25 mx-auto d-block" src="{{ Vite::asset('resources/images/logo.png') }}" alt="">
-                    <h4 class="d-flex justify-content-center fw-bold">Employee Data Master</h4>
+                    <h4 class="d-flex justify-content-center fw-bold">Login</h4>
 
                     <div class="card-body d-flex justify-content-center">
                         <form method="POST" action="{{ route('login') }}">
@@ -107,5 +107,5 @@
             </div>
         </div>
     </div>
-    {{-- @endsection --}}
+
 </body>

@@ -77,6 +77,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                         </div>
+
                     </div>
                     <hr>
                     <div class="row">
@@ -91,20 +92,12 @@
                                 <div class="text-danger"><small>{{ $message }}</small></div>
                             @enderror
                         </div>
-                        <div class="col-md-12 mb-3">
-                            <label for="" class="form-label">Pembayaran</label> <br>
-                            <img class="w-25" src="{{ Vite::asset('resources/images/bca.png') }}" alt="">
-                            <label for="">xxxxxxxxxx</label>
-                            <br>
-                            <img class="w-25" src="{{ Vite::asset('resources/images/mandiri.png') }}" alt="">
-                            <label for="">xxxxxxxx</label>
-                        </div>
-                        <div class="col-md-6 d-grid">
-                            <a href="{{ route('employees.index') }}" class="btn btn-outline-dark btn-lg mt-3"><i class="bi-arrow-left-circle me-2"></i> Cancel</a>
-                        </div>
-                        <div class="col-md-6 d-grid">
-                            <button type="submit" class="btn btn-dark btn-lg mt-3"><i class="bi-check-circle me-2"></i>Checkout</button>
-                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="{{ route('employees.index') }}" class="btn btn-outline-dark btn-lg mt-3"><i class="bi-arrow-left-circle me-2"></i> Cancel</a>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-dark btn-lg mt-3"><i class="bi-check-circle me-2"></i>Checkout</button>
                     </div>
                 </div>
             </div>
